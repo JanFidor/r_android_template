@@ -1,5 +1,7 @@
 package com.example.r_android_template.service
 
+import com.google.gson.Gson
+
 object Service {
 
     private const val estateJsonString = """
@@ -111,4 +113,12 @@ object Service {
             }
         ]
     """
+
+    private val deserializedClass: Class<Array<Estate>> = Array<Estate>::class.java
+    val estateDeserialized: Array<Estate> = Gson().fromJson(estateJsonString, deserializedClass)
+
+    fun getEstate(estateId: Int): Estate?{
+        return if (estateId - 1 in estateDeserialized.indices)
+            estateDeserialized[estateId - 1] else null
+    }
 }

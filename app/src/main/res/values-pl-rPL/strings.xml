@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">r_android_template</string>
+
+    <string name="estateNumber">Numer działki %1$s</string>
+    <string name="area">Pole %1$.2f ha</string>
+    <string name="land">Lokacja %1$s</string>
+    <string name="district">Dystrykt %1$s</string>
+    <string name="showEstateNumber">Wyświetl numer działki</string>
+</resources>

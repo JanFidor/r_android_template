@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">r_android_template</string>
+
+    <string name="estateNumber">Estate number %1$s</string>
+    <string name="area">Area %1$.2f ha</string>
+    <string name="land">Land %1$s</string>
+    <string name="district">District %1$s</string>
+    <string name="showEstateNumber">Show estate number</string>
 </resources>
