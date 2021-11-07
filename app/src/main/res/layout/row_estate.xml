@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <data>
+        <variable
+            name="estate"
+            type="com.example.r_android_template.service.Estate" />
+
+        <variable
+            name="estateHolder"
+            type="com.example.r_android_template.view.EstateAdapter.EstateHolder" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="20dp"
+        android:onClick="@{() -> estateHolder.changePickedEstate(estate)}">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/image_map"
+            android:src="@drawable/ic_map"
+            android:padding="25dp"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            android:id="@+id/text_estate_number"
+            android:theme="@style/textBolded"
+            android:text="@{@string/estateNumber(estate.estateNo)}"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_map"
+            app:layout_constraintEnd_toStartOf="@id/text_land"
+            app:layout_constraintBottom_toTopOf="@id/text_area"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            android:id="@+id/text_land"
+            android:theme="@style/textNormal"
+            android:text="@{@string/land(estate.land)}"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/text_estate_number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/text_district"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            android:id="@+id/text_area"
+            android:theme="@style/textBolded"
+            android:text="@{@string/area(estate.area)}"
+
+            app:layout_constraintTop_toBottomOf="@id/text_estate_number"
+            app:layout_constraintStart_toEndOf="@id/image_map"
+            app:layout_constraintEnd_toStartOf="@id/text_district"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            android:id="@+id/text_district"
+            android:theme="@style/textNormal"
+            android:text="@{@string/district(estate.district)}"
+
+            app:layout_constraintTop_toBottomOf="@id/text_land"
+            app:layout_constraintStart_toEndOf="@id/text_area"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

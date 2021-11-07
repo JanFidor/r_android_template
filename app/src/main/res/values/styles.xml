@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="textNormal">
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
+
+    <style name="textBolded">
+        <item name="android:theme">@style/textNormal</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>
